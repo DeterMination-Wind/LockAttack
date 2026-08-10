@@ -30,6 +30,7 @@ A lightweight Mindustry mod that adds **lock-on focus fire**. Press the lock key
 - Mindustry v8 (build 154+), desktop and Android (the jar contains `classes.dex`).
 - MindustryX and Xenon v8 clients.
 - Also bundled inside [Neon](https://github.com/DeterMination-Wind/Neon) (the aggregate settings page exposes the same options).
+- Marked `"hidden": true` in mod.json: it is an auxiliary/helper mod bundled in Neon, so it does not appear in the in-game mod list. / 模组在 mod.json 中标记为隐藏（`"hidden": true`）：作为随 Neon 捆绑的辅助型模组，不会出现在游戏内模组列表中。
 - Does not modify any game files; pure client-side helper with vanilla network commands for units.
 
 ## Build / 构建
