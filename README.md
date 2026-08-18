@@ -1,47 +1,43 @@
 # LockAttack / 锁定攻击
 
-[![Mindustry Mod](https://img.shields.io/badge/Mindustry-Mod-ffd37f.svg)](https://github.com/topics/mindustry-mod)
+> 把持续瞄准和集火目标变成一次明确的锁定操作。
 
-A lightweight Mindustry mod that adds **lock-on focus fire**. Press the lock key (default `L`) to lock on to an enemy unit or building under the cursor: your directly controlled unit keeps aiming at and firing on the target, and your selected command units receive an attack order through the vanilla network command path. Works on vanilla Mindustry v8 (build 154+), MindustryX and Xenon v8 clients, singleplayer and multiplayer.
+LockAttack 是一个 Mindustry 客户端战斗辅助模组。锁定鼠标指向的敌方单位或建筑后，直接控制的单位会持续关注目标，选中的指挥单位也会收到攻击命令，减少战斗中反复追踪同一个目标的负担。
 
-一个轻量级 Mindustry 模组，提供**锁定集火**功能。按锁定键（默认 `L`）锁定鼠标指向的敌方单位或建筑：你直接控制的单位会持续瞄准并攻击目标，选中的指挥单位会通过原版网络命令路径收到攻击命令。兼容原版 Mindustry v8（build 154+）、MindustryX 与 Xenon v8 客户端，单机与多人均可用。
+它适合需要集中火力处理关键目标、同时管理直接控制单位和指挥单位的玩家。模组使用原版客户端指挥路径，支持单人和多人游戏，不需要服务器安装。
 
-## Features / 功能
+## 使用
 
-- **One-key lock-on / 一键锁定**：Tap `L` to lock the enemy unit or building under the cursor. / 单击 `L` 锁定鼠标指向的敌方单位或建筑。
-- **Focus fire / 集火**：Your directly controlled unit is forced to aim at and fire on the locked target every frame. / 你直接控制的单位每帧强制瞄准锁定目标并开火。
-- **Command units / 指挥单位**：Selected commandable units receive a one-shot attack order via `Call.commandUnits` (vanilla network path, works in multiplayer). / 选中的指挥单位通过原版 `Call.commandUnits` 网络命令路径收到一次性攻击命令（多人同样有效）。
-- **Switch / unlock / 换锁与解锁**：Tap `L` on another target to switch; tap on empty ground or a friendly target to unlock; the lock drops automatically when the target dies, leaves fog, or turns friendly. / 在另一目标上按 `L` 切换锁定；点在空地或己方目标上解锁；目标死亡、进入迷雾或变为友方时自动解锁。
-- **Visual feedback / 视觉反馈**：Rotating lock box, target line, and an optional target HP bar with name and health numbers (toggle in settings, on by default). / 旋转锁定框、目标连线、可选的目标血条（含名称与血量数字，设置中可开关，默认开启）。
-- **Rebindable key / 可自定义键位**：The lock key is a normal game keybind, changeable in Settings → Keybinds. / 锁定键是标准游戏键位，可在 设置 → 键位 中修改。
+默认按 L 锁定目标；再次选择其他目标可以切换，点击空地或己方目标可以解除。锁定键和目标血条显示可在设置中调整。
 
-## Controls / 操作
+## 兼容性
 
-| Action / 操作 | Key / 按键 |
-|---|---|
-| Lock on to the target under the cursor / 锁定鼠标指向的目标 | `L` (rebindable / 可改) |
+支持 Mindustry v8 build 154+、MindustryX 和 Xenon v8 客户端，桌面端与 Android 均可用。
 
-## Settings / 设置
+## 构建
 
-- **Show locked target HP bar / 显示锁定目标血条** — toggle the HP bar above the locked target (default on / 默认开启)。
+~~~powershell
+.\gradlew.bat deploy
+~~~
 
-## Compatibility / 兼容性
+## English
 
-- Mindustry v8 (build 154+), desktop and Android (the jar contains `classes.dex`).
-- MindustryX and Xenon v8 clients.
-- Also bundled inside [Neon](https://github.com/DeterMination-Wind/Neon) (the aggregate settings page exposes the same options).
-- Marked `"hidden": true` in mod.json: it is an auxiliary/helper mod bundled in Neon, so it does not appear in the in-game mod list. / 模组在 mod.json 中标记为隐藏（`"hidden": true`）：作为随 Neon 捆绑的辅助型模组，不会出现在游戏内模组列表中。
-- Does not modify any game files; pure client-side helper with vanilla network commands for units.
+> Turn sustained aiming and focus fire into one deliberate lock-on action.
 
-## Build / 构建
+LockAttack is a Mindustry client-side combat helper. Lock an enemy unit or building under the cursor and your directly controlled unit keeps focusing it; selected command units also receive an attack order, reducing the need to retarget the same enemy repeatedly.
 
-```powershell
-# requires JDK 17 (Gradle 8.14.3 does not support JDK 25)
-$env:JAVA_HOME = "C:\Program Files\Java\jdk-17"
-./gradlew deploy
-# output: 构建/LockAttack/LockAttack-dev.jar (dev) or build/libs/LockAttack-<version>.jar
-```
+It is useful when a key target needs concentrated fire or when you manage both a directly controlled unit and command groups. It uses the vanilla client command path, works in singleplayer and multiplayer, and requires no server installation.
 
-## License / 许可
+## Usage
 
-MIT — see [LICENSE](LICENSE).
+Press L by default to lock the target under the cursor. Select another target to switch, or click empty ground or a friendly target to unlock. Rebind the key and toggle the target HP bar in the settings.
+
+## Compatibility
+
+Supports Mindustry v8 build 154+, MindustryX, and Xenon v8 clients on desktop and Android.
+
+## Build
+
+~~~powershell
+.\gradlew.bat deploy
+~~~
