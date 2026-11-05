@@ -1,6 +1,7 @@
 # LockAttack / 锁定攻击
 
-> [NOTE] 若有反馈，请发送反馈到bugsoc@qq.com / If you have any feedback, please send it to bugsoc@qq.com
+> [!NOTE]
+> 若有反馈，请发送反馈到bugsoc@qq.com / If you have any feedback, please send it to bugsoc@qq.com
 
 > 把持续瞄准和集火目标变成一次明确的锁定操作。
 
