@@ -1,5 +1,7 @@
 # LockAttack / 锁定攻击
 
+> [NOTE] 若有反馈，请发送反馈到bugsoc@qq.com / If you have any feedback, please send it to bugsoc@qq.com
+
 > 把持续瞄准和集火目标变成一次明确的锁定操作。
 
 LockAttack 是一个 Mindustry 客户端战斗辅助模组。锁定鼠标指向的敌方单位或建筑后，直接控制的单位会持续关注目标，选中的指挥单位也会收到攻击命令，减少战斗中反复追踪同一个目标的负担。
